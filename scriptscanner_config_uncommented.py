@@ -7,14 +7,16 @@ class Config(object):
 
     # list in the format (import_path, class_name)
     scripts = [
+        (path + 'DAC_Raster.dac_raster', 'DACRaster'),
+
         (path + 'Interleaved_Linescan.interleaved_linescan', 'InterleavedLinescan'),
 
         (path + 'Line_Narrowing.line_narrowing', 'LineNarrowing'),
 
         (path + 'Randomized_Benchmarking.randomized_benchmarking', 'RandomizedBenchmarking'),
 
-        # (path + 'off_resonant_shelving_measurement.off_resonant_shelving_measurement',
-        # 'off_resonant_shelving_measurement'),
+        (path + 'Off_Resonant_Shelving_Measurement.off_resonant_shelving_measurement',
+         'OffResonantShelvingMeasurement'),
 
         (path + 'Bright_State_Detection.bright_state_detection', 'BrightStateDetection'),
 
@@ -24,9 +26,9 @@ class Config(object):
 
         (path + 'Coherence_Measurement.coherence_measurement', 'CoherenceMeasurement'),
 
-        # (path + 'FFT.PMT_FFT', 'PMT_FFT'),
+        (path + 'FFT.PMT_FFT', 'PMT_FFT'),
 
-        # (path + 'tickle.tickle_experiment', 'ticklescan'),
+        (path + 'tickle.tickle_experiment', 'ticklescan'),
 
         (path + 'Laser_Frequency_Tracker.laser_frequency_tracker', 'LaserFrequencyTracker'),
 
@@ -54,17 +56,19 @@ class Config(object):
 
         (path + 'Quadrupole_Rabi_Flopping.quadrupole_rabi_flopping', 'QuadrupoleRabiFlopping'),
 
+        (path + 'Microwave_Ramsey_Light_Shift.microwave_ramsey_light_shift', 'MicrowaveRamseyLightShift'),
+
         (path + 'Microwave_Ramsey_Experiment.microwave_ramsey_experiment', 'MicrowaveRamseyExperiment'),
 
         (path + 'High_Fidelity_Dark_State_SPAM.high_fidelity_dark_state_spam', 'HighFidelityDarkStateSpam'),
-
-        # (path + 'DAC_Raster.DAC_Raster', 'dacRaster'),
 
         (path + 'Shelving_Rate.shelving_rate', 'ShelvingRate'),
 
         (path + 'Deshelving_Rate.deshelving_rate', 'DeshelvingRate'),
 
         (path + 'Wavemeter_Linescan.wavemeter_linescan', 'WavemeterLinescan'),
+
+        (path + 'wavemeter_linescan_badwm.wavemeter_linescan_badwm', 'WavemeterLinescanBadWM'),
 
         (path + 'Metastable_Microwave_Linescan.metastable_microwave_linescan', 'MetastableMicrowaveLineScan'),
 
@@ -73,28 +77,28 @@ class Config(object):
 
         # (path + 'Rabi_Point_Tracker.rabi_point_tracker', 'RabiPointTracker'),
 
-        # (path + 'ion_position_tracker.ion_position_tracker', 'ion_position_tracker'),
+        (path + 'ion_position_tracker.ion_position_tracker', 'IonPositionTracker'),
 
-        (path + 'Test_Pulse_Sequence.test_pulse_sequence', 'TestPulseSequence'),
+        (path + 'Test_Experiment.test_experiment', 'TestExperiment'),
 
         (path + 'High_Fidelity_Measurement.high_fidelity_measurement', 'HighFidelityMeasurement'),
 
         (path + 'Metastable_Microwave_Ramsey_Experiment.metastable_microwave_ramsey_experiment',
         'MetastableMicrowaveRamseyExperiment'),
 
-        # (path + 'Metastable_Fidelity_Tweak_Up.metastable_fidelity_tweak_up', 'metastable_fidelity_tweak_up'),
+        (path + 'Metastable_Fidelity_Tweak_Up.metastable_fidelity_tweak_up', 'MetastableFidelityTweakUp'),
 
         (path + 'Metastable_Qubit_QND.metastable_qubit_qnd', 'MetastableQubitQND'),
 
-        # (path + 'Metastable_Measurement_Driven_Gate.metastable_measurement_driven_gate',
-        # 'metastable_measurement_driven_gate'),
+        (path + 'Metastable_Measurement_Driven_Gate.metastable_measurement_driven_gate',
+         'MetastableMeasurementDrivenGate'),
 
-        # (path + 'Metastable_Measurement_Driven_Rabi_Flop.metastable_measurement_driven_rabi_flop',
-        # 'metastable_measurement_driven_rabi_flop'),
+        (path + 'Metastable_Measurement_Driven_Rabi_Flop.metastable_measurement_driven_rabi_flop',
+         'MetastableMeasurementDrivenRabiFlop'),
 
         (path + 'Manifold_Detection.manifold_detection', 'ManifoldDetection'),
 
-        # (path + 'Interleaved_Linescan_935.interleaved_linescan_935', 'InterleavedLinescan935'),
+        (path + 'Interleaved_Linescan_935.interleaved_linescan_935', 'InterleavedLinescan935'),
 
         (path + 'AOM_Flickering.aom_flickering', 'AOMFlickering'),
 
