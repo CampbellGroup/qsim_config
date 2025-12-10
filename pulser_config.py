@@ -109,19 +109,19 @@ class PulserConfiguration:
                 }
     # address, allowed frequency range, allowed amplitude range, frequency, amplitude, **kwargs):
     dds_channel_dict = {
-        'OpticalPumpingSP': DDSChannel(0, (80.0, 150.0), (-46.0, -0.2), 120.0, -46.0),
-        '369DP':            DDSChannel(1, (100.0, 300.0), (-46.0, -4.0), 200.0, -10.0),
-        'StateDetectionSP': DDSChannel(2, (80.0, 150.0), (-46.0, -4.0), 110.0, -46.0),
-        'RF_Drive': DDSChannel(3, (20.0, 70.0), (-46.0, -5.0), 32.293, -11.5),
-        '935SP':            DDSChannel(4, (280.0, 360.0), (-46.0, -8.0), 320.0, -8.0),
-        'DopplerCoolingSP': DDSChannel(5, (80.0, 240.0), (-46.0, -6.0), 110.0, -46.0),
-        '760SP2':           DDSChannel(6, (120.0, 330.0), (-46.0, 5.0), 160.0, 2.0),
-        'Microwave_qubit': DDSChannel(7, (10.0, 600.0), (-46.0, 7.0), 377.19, -46.0),
-        '760SP':            DDSChannel(8, (90.0, 330.0), (-46.0, -8.0), 160.0, -11.0),
-        '411DP1':           DDSChannel(9, (400.0, 500.0), (-46.0, -7.2), 450.0, -46.0),
-        '532SP':            DDSChannel(10, (65.0, 95.0), (-46.0, -5.0), 80.0, -46.0),
-        '3GHz_qubit':       DDSChannel(11, (100.0, 700.0), (-46.0, -2.0), 250.0, -46.0),
-        '976SP':            DDSChannel(12, (250.0, 400.0), (-46.0, -4.0), 320.0, -46.0),
+        "OpticalPumpingSP": DDSChannel(0, (80.0, 150.0), (-46.0, -0.2), 120.0, -46.0),
+        "369DP": DDSChannel(1, (100.0, 300.0), (-46.0, -4.0), 200.0, -10.0),
+        "StateDetectionSP": DDSChannel(2, (80.0, 150.0), (-46.0, -4.0), 110.0, -46.0),
+        "RF_Drive": DDSChannel(3, (20.0, 70.0), (-46.0, -5.0), 32.293, -46.0),
+        "935SP": DDSChannel(4, (280.0, 360.0), (-46.0, -8.0), 320.0, -8.0),
+        "DopplerCoolingSP": DDSChannel(5, (80.0, 240.0), (-46.0, -6.0), 110.0, -46.0),
+        "760SP2": DDSChannel(6, (120.0, 330.0), (-46.0, 5.0), 160.0, 2.0),
+        "Microwave_qubit": DDSChannel(7, (10.0, 600.0), (-46.0, 7.0), 377.19, -46.0),
+        "760SP": DDSChannel(8, (90.0, 330.0), (-46.0, -8.0), 160.0, -11.0),
+        "411DP1": DDSChannel(9, (400.0, 500.0), (-46.0, -7.2), 450.0, -46.0),
+        "532SP": DDSChannel(10, (65.0, 95.0), (-46.0, -5.0), 80.0, -46.0),
+        "3GHz_qubit": DDSChannel(11, (100.0, 700.0), (-46.0, -2.0), 250.0, -46.0),
+        "976SP": DDSChannel(12, (250.0, 400.0), (-46.0, -4.0), 320.0, -46.0),
         # 'ProtectionBeam': DDSChannelState(11, (100.0, 500.0), (-46.0, -1.0), 250.0, -11.0),
     }
     remote_channels = {}

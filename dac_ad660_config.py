@@ -52,11 +52,11 @@ class HardwareConfiguration:
     board_voltage_range = (-10.0, 10.0)
 
     dac_channels = [
-        ChannelConfiguration(4, displayed=False),
-        ChannelConfiguration(6, displayed=False),
-        ChannelConfiguration(8,  name="End Cap 1", allowed_voltage_range=(0, 10)),
+        # ChannelConfiguration(4, displayed=False),
+        # ChannelConfiguration(6, displayed=False),
+        ChannelConfiguration(8, name="End Cap 1", allowed_voltage_range=(0, 10)),
         ChannelConfiguration(10, name="End Cap 2", allowed_voltage_range=(0, 10)),
-        ChannelConfiguration(2,  name="RF Rod 1"),
+        ChannelConfiguration(2, name="RF Rod 1"),
         ChannelConfiguration(17, name="DC Rod 1"),
         ChannelConfiguration(19, name="DC Rod 2"),
         ChannelConfiguration(21, name="RF Rod 2"),
@@ -73,17 +73,35 @@ class HardwareConfiguration:
         return {chan.name: chan for chan in cls.dac_channels}[name]
 
 
+# class MultipoleConfiguration:
+#
+#     multipoles = [
+#         Multipole("", displayed=False),
+#         Multipole("", displayed=False),
+#         Multipole("EC Voltage", effect=[0, 0, 1, 1, 0, 0, 0, 0]),
+#         Multipole("EC Difference", effect=[0, 0, 1, -1, 0, 0, 0, 0]),
+#         Multipole("Left/Right", effect=[0, 0, 0, 0, 1, 1, -1, -1]),
+#         Multipole("Up/Down", effect=[0, 0, 0, 0, 1, -1, 1, -1]),
+#         Multipole("Squeeze", effect=[0, 0, 0, 0, 1, 1, 1, 1]),
+#         Multipole("Quadrupole", effect=[0, 0, 0, 0, 1, -1, -1, 1]),
+#     ]
+#
+#     # construct the multipole matrix. By default, the multipoles correspond one-to-one with the DAC channels
+#     M = np.identity(len(multipoles))
+#     for i, multipole in enumerate(multipoles):
+#         if multipole.effect:
+#             M[i] = multipole.effect
+#     M = M.transpose()
+
 class MultipoleConfiguration:
 
     multipoles = [
-        Multipole("", displayed=False),
-        Multipole("", displayed=False),
-        Multipole("EC Voltage", effect=[0, 0, 1, 1, 0, 0, 0, 0]),
-        Multipole("EC Difference", effect=[0, 0, 1, -1, 0, 0, 0, 0]),
-        Multipole("Left/Right", effect=[0, 0, 0, 0, 1, 1, -1, -1]),
-        Multipole("Up/Down", effect=[0, 0, 0, 0, 1, -1, 1, -1]),
-        Multipole("Squeeze", effect=[0, 0, 0, 0, 1, 1, 1, 1]),
-        Multipole("Quadrupole", effect=[0, 0, 0, 0, 1, -1, -1, 1]),
+        Multipole("EC Voltage", effect=[1, 1, 0, 0, 0, 0]),
+        Multipole("EC Difference", effect=[1, -1, 0, 0, 0, 0]),
+        Multipole("Left/Right", effect=[0, 0, 1, 1, -1, -1]),
+        Multipole("Up/Down", effect=[0, 0, 1, -1, 1, -1]),
+        Multipole("Squeeze", effect=[0, 0, 1, 1, 1, 1]),
+        Multipole("Quadrupole", effect=[0, 0, 1, -1, -1, 1]),
     ]
 
     # construct the multipole matrix. By default, the multipoles correspond one-to-one with the DAC channels
